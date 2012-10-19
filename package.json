@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.2",
+  "packages": [
+    {
+      "name": "AngelScript",
+      "description": "Syntax highlighting for AngelScript in Sublime Text 2.",
+      "author": "wronex",
+      "homepage": "https://github.com/wronex/sublime-angelscript",
+      "last_modified": "2012-10-19 04:57:00"
+    }
+  ]
+}
