@@ -161,16 +161,25 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(~|!|&amp;&amp;|\|\||or|and|xor|not)</string>
+			<string>(or|and|xor|not)</string>
+			<key>name</key>
+			<string>keyword.operator.logical.angelscript</string>
+		</dict>
+		<!-- This became too much. -->
+		<!--
+		<dict>
+			<key>match</key>
+			<string>(~|!|&amp;&amp;|\|\|)</string>
 			<key>name</key>
 			<string>keyword.operator.logical.angelscript</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>[-!%&amp;*+=/?:]</string>
+			<string>[-!%&amp;&gt;&lt;@*+=/?:]</string>
 			<key>name</key>
 			<string>keyword.operator.symbolic.angelscript</string>
 		</dict>
+		-->
 		<dict>
 			<key>match</key>
 			<string>\b(get|in|inout|out|override|set|private|public|const|default|final|shared|mixin)\b</string>
@@ -287,10 +296,18 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(\b|\.|\-\>)([a-zA-Z_][a-zA-Z_0-9]*)\b(\s*\()</string>
+			<string>(\b|\.)([a-zA-Z_][a-zA-Z_0-9]*)\b(\s*\()</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b([A-Z][A-Z0-9_]+)\b</string>
+			<key>name</key>
+			<string>constant.other.angelscript</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
 	<string>source.angelscript</string>
+	<key>uuid</key>
+	<string>69E25C06-FA48-4207-BF35-11353888A8F6</string>
 </dict>
 </plist>
