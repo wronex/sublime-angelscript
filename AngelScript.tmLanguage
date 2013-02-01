@@ -161,7 +161,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(or|and|xor|not)</string>
+			<string>\b(or|and|xor|not)\b</string>
 			<key>name</key>
 			<string>keyword.operator.logical.angelscript</string>
 		</dict>
