@@ -149,6 +149,18 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>(~|!|&amp;&amp;|\|\|)</string>
+			<key>name</key>
+			<string>keyword.operator.logical.angelscript</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[-!%&amp;&gt;&lt;@*+=/?:]</string>
+			<key>name</key>
+			<string>keyword.operator.symbolic.angelscript</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>\b(for|in|break|continue|while|do|return|if|else|case|switch|namespace)\b</string>
 			<key>name</key>
 			<string>keyword.control.angelscript</string>
@@ -165,21 +177,6 @@
 			<key>name</key>
 			<string>keyword.operator.logical.angelscript</string>
 		</dict>
-		<!-- This became too much. -->
-		<!--
-		<dict>
-			<key>match</key>
-			<string>(~|!|&amp;&amp;|\|\|)</string>
-			<key>name</key>
-			<string>keyword.operator.logical.angelscript</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>[-!%&amp;&gt;&lt;@*+=/?:]</string>
-			<key>name</key>
-			<string>keyword.operator.symbolic.angelscript</string>
-		</dict>
-		-->
 		<dict>
 			<key>match</key>
 			<string>\b(get|in|inout|out|override|set|private|public|const|default|final|shared|mixin)\b</string>
@@ -222,6 +219,15 @@
 			<key>name</key>
 			<string>keyword.control.import.angelscript</string>
 		</dict>
+		<!-- This became too much. -->
+		<!--
+		<dict>
+			<key>match</key>
+			<string>(@[a-zA-Z_]+[0-9a-zA-Z_]*)</string>
+			<key>name</key>
+			<string>variable.other.pointer.angelscript</string>
+		</dict>
+		-->
 		<dict>
 			<key>captures</key>
 			<dict>
