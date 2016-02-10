@@ -185,7 +185,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(enum|void|bool|typedef|funcdef|int|int8|int16|int32|int64|uint|uint8|uint16|uint32|uint64|string|ref|array|double|float)\b</string>
+			<string>\b(enum|void|bool|typedef|funcdef|int|int8|int16|int32|int64|uint|uint8|uint16|uint32|uint64|string|ref|array|double|float|auto|dictionary)\b</string>
+			<key>name</key>
+			<string>storage.type.angelscript</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[A-Za-z][A-Za-z0-9]+@</string>
 			<key>name</key>
 			<string>storage.type.angelscript</string>
 		</dict>
