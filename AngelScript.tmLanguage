@@ -191,7 +191,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>[A-Za-z][A-Za-z0-9]+@</string>
+			<string>[A-Za-z_][A-Za-z_0-9]+@</string>
 			<key>name</key>
 			<string>storage.type.angelscript</string>
 		</dict>
