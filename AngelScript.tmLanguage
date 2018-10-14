@@ -161,7 +161,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(for|in|break|continue|while|do|return|if|else|case|switch|namespace)\b</string>
+			<string>\b(for|in|break|continue|while|do|return|if|else|case|switch|namespace|try|catch)\b</string>
 			<key>name</key>
 			<string>keyword.control.angelscript</string>
 		</dict>
