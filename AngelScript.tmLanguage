@@ -179,7 +179,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(get|in|inout|out|override|set|private|public|protected|const|default|final|shared|external|mixin|abstract)\b</string>
+			<string>\b(get|in|inout|out|override|explicit|set|private|public|protected|const|default|final|shared|external|mixin|abstract)\b</string>
 			<key>name</key>
 			<string>storage.modifier.angelscript</string>
 		</dict>
