@@ -161,7 +161,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(for|in|break|continue|while|do|return|if|else|case|switch|namespace)\b</string>
+			<string>\b(for|in|break|continue|while|do|return|if|else|case|switch|namespace|try|catch)\b</string>
 			<key>name</key>
 			<string>keyword.control.angelscript</string>
 		</dict>
@@ -179,7 +179,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(get|in|inout|out|override|set|private|public|const|default|final|shared|external|mixin|abstract)\b</string>
+			<string>\b(get|in|inout|out|override|explicit|set|private|public|protected|const|default|final|shared|external|mixin|abstract)\b</string>
 			<key>name</key>
 			<string>storage.modifier.angelscript</string>
 		</dict>
