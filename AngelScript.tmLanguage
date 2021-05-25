@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string>Made by Wronex :D</string>
+	<string>Made by Wronex and maintained by Codecat</string>
 	<key>fileTypes</key>
 	<array>
 		<string>as</string>
@@ -12,9 +12,8 @@
 	<string>-\*- C\+\+ -\*-</string>
 	<key>foldingStartMarker</key>
 	<string>(?x)
-		 /\*\*(?!\*)
-		|^(?![^{]*?//|[^{]*?/\*(?!.*?\*/.*?\{)).*?\{\s*($|//|/\*(?!.*?\*/.*\S))
-	</string>
+ /\*\*(?!\*)
+|^(?![^{]*?//|[^{]*?/\*(?!.*?\*/.*?\{)).*?\{\s*($|//|/\*(?!.*?\*/.*\S))</string>
 	<key>foldingStopMarker</key>
 	<string>(?&lt;!\*)\*\*/|^\s*\}</string>
 	<key>keyEquivalent</key>
@@ -23,10 +22,6 @@
 	<string>AngelScript</string>
 	<key>patterns</key>
 	<array>
-		<!-- <dict>
-			<key>include</key>
-			<string>source.c</string>
-		</dict> -->
 		<dict>
 			<key>captures</key>
 			<dict>
@@ -155,21 +150,134 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>[-!%&amp;&gt;&lt;@*+=/?:]</string>
-			<key>name</key>
-			<string>keyword.operator.symbolic.angelscript</string>
-		</dict>
-		<dict>
-			<key>match</key>
 			<string>\b(for|in|break|continue|while|do|return|if|else|case|switch|namespace|try|catch)\b</string>
 			<key>name</key>
 			<string>keyword.control.angelscript</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.angelscript</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.generic.begin.angelscript</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.generic.end.angelscript</string>
+				</dict>
+			</dict>
 			<key>match</key>
-			<string>\b(is|cast)\b</string>
+			<string>\b(cast)(&lt;)([A-Za-z_][A-Za-z_0-9]+)(&gt;)</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.angelscript</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^\s*([A-Za-z_][A-Za-z_0-9]+)\s+([A-Za-z_][A-Za-z_0-9]+)\s*[=;]</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>meta.function entity.name.function.angelscript</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^\s*([A-Za-z_][A-Za-z_0-9]+)\s+([A-Za-z_][A-Za-z_0-9]+)\(</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.angelscript</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.angelscript</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(@)([A-Za-z_][A-Za-z_0-9]+)\b</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.angelscript</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.assignment.angelscript</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\b([A-Za-z_][A-Za-z_0-9]+)\s*([-+/*%]?=)</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[=]</string>
 			<key>name</key>
-			<string>keyword.operator.angelscript</string>
+			<string>keyword.operator.assignment.angelscript</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[%*+\-/]</string>
+			<key>name</key>
+			<string>keyword.operator.arithmetic.angelscript</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[|&amp;&gt;&lt;]</string>
+			<key>name</key>
+			<string>keyword.operator.bitwise.angelscript</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>[!@?:]</string>
+			<key>name</key>
+			<string>keyword.operator.symbolic.angelscript</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(is)\b</string>
+			<key>name</key>
+			<string>keyword.other.angelscript</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -190,10 +298,43 @@
 			<string>storage.type.angelscript</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.angelscript</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.angelscript</string>
+				</dict>
+			</dict>
 			<key>match</key>
-			<string>[A-Za-z_][A-Za-z_0-9]+@</string>
-			<key>name</key>
-			<string>storage.type.angelscript</string>
+			<string>([A-Za-z_][A-Za-z_0-9]+)(@)\s+([A-Za-z_][A-Za-z_0-9]+)</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.angelscript</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>([A-Za-z_][A-Za-z_0-9]+)(@)</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -223,17 +364,8 @@
 			<key>match</key>
 			<string>^\s*\#([a-zA-Z_0-9]*)?</string>
 			<key>name</key>
-			<string>keyword.control.import.angelscript</string>
+			<string>meta.preprocessor keyword.control.import.angelscript</string>
 		</dict>
-		<!-- This became too much. -->
-		<!--
-		<dict>
-			<key>match</key>
-			<string>(@[a-zA-Z_]+[0-9a-zA-Z_]*)</string>
-			<key>name</key>
-			<string>variable.other.pointer.angelscript</string>
-		</dict>
-		-->
 		<dict>
 			<key>captures</key>
 			<dict>
@@ -262,6 +394,11 @@
 					<key>name</key>
 					<string>storage.type.class.angelscript</string>
 				</dict>
+				<key>11</key>
+				<dict>
+					<key>name</key>
+					<string>entity.other.inherited-class.angelscript</string>
+				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
@@ -287,11 +424,6 @@
 					<key>name</key>
 					<string>entity.other.inherited-class.angelscript</string>
 				</dict>
-				<key>11</key>
-				<dict>
-					<key>name</key>
-					<string>entity.other.inherited-class.angelscript</string>
-				</dict>
 			</dict>
 			<key>match</key>
 			<string>\b(class|interface)\s+([a-zA-Z_0-9]*)(?:\s*:\s*([a-zA-Z_0-9]*)(\s*,\s*([a-zA-Z_0-9]*))?(\s*,\s*([a-zA-Z_0-9]*))?(\s*,\s*([a-zA-Z_0-9]*))?(\s*,\s*([a-zA-Z_0-9]*))?)?</string>
@@ -304,7 +436,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>meta.function-call.angelscript</string>
+					<string>meta.function-call.angelscript variable.function.angelscript</string>
 				</dict>
 			</dict>
 			<key>match</key>
