@@ -119,6 +119,12 @@ patterns:
     '1': {name: variable.other.angelscript}
     '2': {name: keyword.operator.assignment.angelscript}
 
+# Namespaces
+- match: \b([a-zA-Z_][a-zA-Z_0-9]*)(::)
+  captures:
+    '1': {name: entity.name.namespace}
+    '2': {name: keyword.operator.symbolic.angelscript}
+
 # Operators
 - name: keyword.operator.assignment.angelscript
   match: '[=]'

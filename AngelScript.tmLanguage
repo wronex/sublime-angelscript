@@ -311,6 +311,23 @@
 			<string>\b([A-Za-z_][A-Za-z_0-9]*)\s*([-+/*%]?=)</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.namespace</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.symbolic.angelscript</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\b([a-zA-Z_][a-zA-Z_0-9]*)(::)</string>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>[=]</string>
 			<key>name</key>
