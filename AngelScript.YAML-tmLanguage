@@ -56,7 +56,7 @@ patterns:
   match: \b(for|in|break|continue|while|do|return|if|else|case|switch|namespace|try|catch)\b
 
 # Explicit cast
-- match: \b(cast)(<)([A-Za-z_][A-Za-z_0-9]+)(>)
+- match: \b(cast)(<)([A-Za-z_][A-Za-z_0-9]*)(>)
   captures:
     '1': {name: keyword.other.angelscript}
     '2': {name: punctuation.definition.generic.begin.angelscript}
@@ -102,19 +102,19 @@ patterns:
     '7': {name: variable.other.angelscript}
 
 # Function definition
-- match: ^\s*([A-Za-z_][A-Za-z_0-9]+)\s+([A-Za-z_][A-Za-z_0-9]+)\(
+- match: ^\s*([A-Za-z_][A-Za-z_0-9]*)\s+([A-Za-z_][A-Za-z_0-9]*)\(
   captures:
     '1': {name: storage.type.angelscript}
     '2': {name: meta.function entity.name.function.angelscript}
 
 # Handle dereference
-- match: (@)([A-Za-z_][A-Za-z_0-9]+)\b
+- match: (@)([A-Za-z_][A-Za-z_0-9]*)\b
   captures:
     '1': {name: keyword.other.angelscript}
     '2': {name: variable.other.angelscript}
 
 # Variable assignment
-- match: \b([A-Za-z_][A-Za-z_0-9]+)\s*([-+/*%]?=)
+- match: \b([A-Za-z_][A-Za-z_0-9]*)\s*([-+/*%]?=)
   captures:
     '1': {name: variable.other.angelscript}
     '2': {name: keyword.operator.assignment.angelscript}
@@ -144,13 +144,13 @@ patterns:
 - name: storage.type.angelscript
   match: \b(enum|void|bool|typedef|funcdef|int|int8|int16|int32|int64|uint|uint8|uint16|uint32|uint64|string|ref|array|double|float|auto|dictionary)\b
 
-- match: '([A-Za-z_][A-Za-z_0-9]+)(@)\s+([A-Za-z_][A-Za-z_0-9]+)'
+- match: '([A-Za-z_][A-Za-z_0-9]*)(@)\s+([A-Za-z_][A-Za-z_0-9]*)'
   captures:
     '1': {name: storage.type.angelscript}
     '2': {name: keyword.other.angelscript}
     '3': {name: variable.other.angelscript}
 
-- match: '([A-Za-z_][A-Za-z_0-9]+)(@)'
+- match: '([A-Za-z_][A-Za-z_0-9]*)(@)'
   captures:
     '1': {name: storage.type.angelscript}
     '2': {name: keyword.other.angelscript}

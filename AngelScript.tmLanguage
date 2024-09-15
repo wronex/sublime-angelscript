@@ -179,7 +179,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(cast)(&lt;)([A-Za-z_][A-Za-z_0-9]+)(&gt;)</string>
+			<string>\b(cast)(&lt;)([A-Za-z_][A-Za-z_0-9]*)(&gt;)</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -274,7 +274,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*([A-Za-z_][A-Za-z_0-9]+)\s+([A-Za-z_][A-Za-z_0-9]+)\(</string>
+			<string>^\s*([A-Za-z_][A-Za-z_0-9]*)\s+([A-Za-z_][A-Za-z_0-9]*)\(</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -291,7 +291,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(@)([A-Za-z_][A-Za-z_0-9]+)\b</string>
+			<string>(@)([A-Za-z_][A-Za-z_0-9]*)\b</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -308,7 +308,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b([A-Za-z_][A-Za-z_0-9]+)\s*([-+/*%]?=)</string>
+			<string>\b([A-Za-z_][A-Za-z_0-9]*)\s*([-+/*%]?=)</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -378,7 +378,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>([A-Za-z_][A-Za-z_0-9]+)(@)\s+([A-Za-z_][A-Za-z_0-9]+)</string>
+			<string>([A-Za-z_][A-Za-z_0-9]*)(@)\s+([A-Za-z_][A-Za-z_0-9]*)</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -395,7 +395,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>([A-Za-z_][A-Za-z_0-9]+)(@)</string>
+			<string>([A-Za-z_][A-Za-z_0-9]*)(@)</string>
 		</dict>
 		<dict>
 			<key>match</key>
