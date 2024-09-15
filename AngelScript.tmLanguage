@@ -196,7 +196,68 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*([A-Za-z_][A-Za-z_0-9]+)\s+([A-Za-z_][A-Za-z_0-9]+)\s*[=;]</string>
+			<string>(?x:
+  ^\s*
+  ([A-Za-z_][A-Za-z_0-9]*)
+  \s+
+  ([A-Za-z_][A-Za-z_0-9]*)
+  \s*[=;]
+)</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.angelscript</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?x:
+  ^\s*
+  ([A-Za-z_][A-Za-z_0-9]*)
+  &lt;(?:
+    (.*?)
+    (?:,\s*(.*?))?
+    (?:,\s*(.*?))?
+    (?:,\s*(.*?))?
+    (?:,\s*(.*?))?
+  )&gt;
+  \s+
+  ([A-Za-z_][A-Za-z_0-9]*)
+  \s*[=;]
+)</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -382,7 +443,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\.[a-zA-Z_][a-zA-Z_0-9]*\b(?!\s*\()</string>
+			<string>\.[a-zA-Z_][a-zA-Z_0-9]*\b(?!\s*[&lt;\(])</string>
 			<key>name</key>
 			<string>variable.other.dot-access.angelscript</string>
 		</dict>
@@ -394,11 +455,6 @@
 					<key>name</key>
 					<string>storage.type.class.angelscript</string>
 				</dict>
-				<key>11</key>
-				<dict>
-					<key>name</key>
-					<string>entity.other.inherited-class.angelscript</string>
-				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
@@ -409,7 +465,17 @@
 					<key>name</key>
 					<string>entity.other.inherited-class.angelscript</string>
 				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.other.inherited-class.angelscript</string>
+				</dict>
 				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>entity.other.inherited-class.angelscript</string>
+				</dict>
+				<key>6</key>
 				<dict>
 					<key>name</key>
 					<string>entity.other.inherited-class.angelscript</string>
@@ -419,28 +485,84 @@
 					<key>name</key>
 					<string>entity.other.inherited-class.angelscript</string>
 				</dict>
-				<key>9</key>
-				<dict>
-					<key>name</key>
-					<string>entity.other.inherited-class.angelscript</string>
-				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(class|interface)\s+([a-zA-Z_0-9]*)(?:\s*:\s*([a-zA-Z_0-9]*)(\s*,\s*([a-zA-Z_0-9]*))?(\s*,\s*([a-zA-Z_0-9]*))?(\s*,\s*([a-zA-Z_0-9]*))?(\s*,\s*([a-zA-Z_0-9]*))?)?</string>
+			<string>(?x:
+  \b(class|interface)
+  \s+([a-zA-Z_0-9]*)
+  (?:
+    \s*:\s*([a-zA-Z_0-9]*)
+    (?:\s*,\s*([a-zA-Z_0-9]*))?
+    (?:\s*,\s*([a-zA-Z_0-9]*))?
+    (?:\s*,\s*([a-zA-Z_0-9]*))?
+    (?:\s*,\s*([a-zA-Z_0-9]*))?
+  )?
+)</string>
 			<key>name</key>
 			<string>meta.class.angelscript</string>
 		</dict>
 		<dict>
 			<key>captures</key>
 			<dict>
-				<key>2</key>
+				<key>1</key>
 				<dict>
 					<key>name</key>
 					<string>meta.function-call.angelscript variable.function.angelscript</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(\b|\.)([a-zA-Z_][a-zA-Z_0-9]*)\b(\s*\()</string>
+			<string>(?x:
+  (?:\b|\.)
+  ([a-zA-Z_][a-zA-Z_0-9]*)
+  \b(?:\s*\()
+)</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>meta.function-call.angelscript variable.function.angelscript</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.angelscript</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?x:
+  (?:\b|\.)
+  ([a-zA-Z_][a-zA-Z_0-9]*)
+  &lt;(?:
+    (.*?)
+    (?:,\s*(.*?))?
+    (?:,\s*(.*?))?
+    (?:,\s*(.*?))?
+    (?:,\s*(.*?))?
+  )&gt;\(
+)</string>
 		</dict>
 		<dict>
 			<key>match</key>
