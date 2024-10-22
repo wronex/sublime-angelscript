@@ -53,7 +53,7 @@ patterns:
 
 # Control keywords
 - name: keyword.control.angelscript
-  match: \b(for|in|break|continue|while|do|return|if|else|case|switch|namespace|try|catch)\b
+  match: \b(for|foreach|in|break|continue|while|do|return|if|else|case|switch|namespace|try|catch)\b
 
 # Explicit cast
 - match: \b(cast)(<)([A-Za-z_][A-Za-z_0-9]*)(>)
